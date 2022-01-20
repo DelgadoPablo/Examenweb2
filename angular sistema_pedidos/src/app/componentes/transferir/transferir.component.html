@@ -1,0 +1,65 @@
+<section style="max-width: 1200px; margin: 20px auto;">
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Fecha de inicio</label>
+            <input type="date" [(ngModel)]="datei" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Fecha de fin</label>
+            <input type="date" [(ngModel)]="datef" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        
+
+        <button (click)="buscar()" class="btn btn-primary">BUSCAR PEDIDOS POR FECHAS</button>
+ 
+
+    
+
+    <table style="margin-top: 30px;" *ngIf="listapedidos.length > 0" class="table">
+        <thead>
+            <tr>
+                <th scope="col">Productos</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Producto</th>
+                <th scope="col">Numero Pedido</th>
+                <th scope="col">Fecha Pedido</th>
+                <th scope="col">Hora Pedido</th>
+                <th scope="col">Total</th>
+                <th scope="col">Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let pedido of listapedidos">
+                
+                <td>
+                    {{pedido.detalle_productos}}
+                </td>
+                <td>
+                    {{pedido.descripcion_pedido}}
+                </td>
+                <td>
+                    {{pedido.producto_solicitado}}
+                </td>
+                <td>
+                    {{pedido.num_pedido}}
+                </td>
+                <td>
+                    {{pedido.fecha_pedido}}
+                </td>
+                <td>
+                    {{pedido.hora_pedido}}
+                </td>
+                <td>
+                    {{pedido.total}}
+                </td>
+                <td>
+                    {{pedido.estado}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button style="margin-top: 30px;" (click)="transferir()" *ngIf="listapedidos.length > 0" class="btn btn-primary">Transferir estos pedidos</button>
+    <h2 style="margin-top: 30px;" *ngIf="listapedidos.length == 0">NO SE HAN ENCONTRADO PEDIDOS</h2>
+
+
+</section>

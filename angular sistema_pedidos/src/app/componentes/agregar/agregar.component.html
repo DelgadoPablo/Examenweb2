@@ -1,0 +1,49 @@
+
+<section style="max-width: 1200px; margin: 30px auto;">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Detalle de Productos</label>
+            <input type="text" [(ngModel)]="detalle_productos" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Descripcion de pedido</label>
+            <input type="text" [(ngModel)]="descripcion_pedido" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Producto solicitado</label>
+            <input type="text" [(ngModel)]="producto_solicitado" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">numero pedido</label>
+            <input type="number" [(ngModel)]="num_pedido" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">fecha_pedido</label>
+            <input type="date" [(ngModel)]="fecha_pedido" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Hora Pedido</label>
+            <input type="text" [(ngModel)]="hora_pedido" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Total</label>
+            <input type="number" [(ngModel)]="total" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Comision</label>
+            <input type="number" [(ngModel)]="comision" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Fecha Entrega</label>
+            <input type="date" [(ngModel)]="fecha_entrega" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+
+        <button (click)="agregar()" class="btn btn-primary">Submit</button>
+</section>

@@ -1,0 +1,57 @@
+<section style="max-width: 1200px; margin: 20px auto;">
+<button [routerLink]="['/agregar']">Agregar venta</button>
+<table style="margin-top: 30px;" *ngIf="listaventas.length > 0" class="table">
+    <thead>
+        <tr>
+            <th scope="col">Productos</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Producto</th>
+            <th scope="col">Numero Pedido</th>
+            <th scope="col">Fecha Pedido</th>
+            <th scope="col">Hora Pedido</th>
+            <th scope="col">Total</th>
+            <th scope="col">comision</th>
+            <th scope="col">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pedido of listaventas">
+            
+            <td>
+                {{pedido.detalle_productos}}
+            </td>
+            <td>
+                {{pedido.descripcion_pedido}}
+            </td>
+            <td>
+                {{pedido.producto_solicitado}}
+            </td>
+            <td>
+                {{pedido.num_pedido}}
+            </td>
+            <td>
+                {{pedido.fecha_pedido}}
+            </td>
+            <td>
+                {{pedido.hora_pedido}}
+            </td>
+            <td>
+                {{pedido.total}}
+            </td>
+            <td>
+                {{pedido.estado}}
+            </td>
+            <td>
+                {{pedido.comision}}
+            </td>
+            <td>
+                <a [routerLink]="['/editar',pedido._id]">Editar</a>
+                <a (click)="eliminar(pedido._id)">Eliminar</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<h2 style="margin-top: 30px;" *ngIf="listaventas.length == 0">NO SE HAN ENCONTRADO PEDIDOS</h2>
+
+
+</section>

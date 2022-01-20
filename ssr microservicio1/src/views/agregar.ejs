@@ -1,0 +1,46 @@
+<% layout('layouts/main') -%>
+    <section>
+        <form style="max-width: 1200px; margin: 20px auto;" method="POST" action="/api/pedidos/add">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Detalle de Productos</label>
+                <input type="text" name="detalle_productos" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Descripcion de pedido</label>
+                <input type="text" name="descripcion_pedido" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Producto solicitado</label>
+                <input type="text" name="producto_solicitado" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">numero pedido</label>
+                <input type="number" name="num_pedido" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">fecha_pedido</label>
+                <input type="date" name="fecha_pedido" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Hora Pedido</label>
+                <input type="text" name="hora_pedido" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Total</label>
+                <input type="number" name="total" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Estado</label>
+                <input type="text" name="estado" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </section>

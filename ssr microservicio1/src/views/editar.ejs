@@ -1,0 +1,61 @@
+<% layout('layouts/main') -%>
+    <section>
+        <% if (data) {%>
+            <form style="max-width: 1200px; margin: 20px auto;" method="POST" action="/api/pedidos/update/<%= data.id%>">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Detalle de Productos</label>
+                    <input type="text" value="<%= data.detalle_productos %>" name="detalle_productos" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Descripcion de pedido</label>
+                    <input type="text" value="<%= data.descripcion_pedido%>" name="descripcion_pedido" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Producto solicitado</label>
+                    <input type="text" value="<%= data.producto_solicitado%>" name="producto_solicitado" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">numero pedido</label>
+                    <input type="number" value="<%= data.num_pedido%>" name="num_pedido" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">fecha_pedido</label>
+                    <input type="date" value="<%= data.fecha_pedido%>" name="fecha_pedido" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Hora Pedido</label>
+                    <input type="text" value="<%= data.hora_pedido%>" name="hora_pedido" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Total</label>
+                    <input type="number" value="<%= data.total%>" name="total" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Estado</label>
+                    <input type="text" value="<%= data.estado%>" name="estado" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+            <% }else { %>
+                <tr>
+                    <h2>NO SE ENCONTRO EL PEDIDO</h2>
+                </tr>
+                <% } %>
+    </section>
